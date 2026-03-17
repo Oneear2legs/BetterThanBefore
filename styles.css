@@ -145,12 +145,12 @@ header h1 {
 }
 
 .quote-text {
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.8;
     color: #555;
     margin-bottom: 15px;
     font-style: italic;
-    min-height: 100px;
+    min-height: auto;
 }
 
 .quote-attribute {
@@ -219,7 +219,7 @@ footer p {
     }
 
     .quote-text {
-        min-height: 80px;
+        min-height: auto;
     }
 }
 
