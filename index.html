@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prigogine Quotes - Multilingual</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ilya Prigogine Quotes</h1>
+            <p class="subtitle">Wisdom across languages</p>
+        </header>
+
+        <div class="controls">
+            <button id="newQuoteBtn" class="btn-primary">New Quote</button>
+            <div class="language-selector">
+                <label for="thirdLanguage">Third Language:</label>
+                <select id="thirdLanguage">
+                    <option value="fr">French (Français)</option>
+                    <option value="de">German (Deutsch)</option>
+                    <option value="es">Spanish (Español)</option>
+                    <option value="it">Italian (Italiano)</option>
+                    <option value="pt">Portuguese (Português)</option>
+                    <option value="ja">Japanese (日本語)</option>
+                    <option value="zh">Chinese (中文)</option>
+                    <option value="ar">Arabic (العربية)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="quotes-container">
+            <div class="quote-box russian">
+                <h2>Russian (Русский)</h2>
+                <p id="quoteRussian" class="quote-text"></p>
+                <p id="attributeRussian" class="quote-attribute"></p>
+            </div>
+
+            <div class="quote-box english">
+                <h2>English</h2>
+                <p id="quoteEnglish" class="quote-text"></p>
+                <p id="attributeEnglish" class="quote-attribute"></p>
+            </div>
+
+            <div class="quote-box custom">
+                <h2 id="customLanguageName">French (Français)</h2>
+                <p id="quoteCustom" class="quote-text"></p>
+                <p id="attributeCustom" class="quote-attribute"></p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Celebrating Ilya Prigogine's contributions to thermodynamics and philosophy</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
