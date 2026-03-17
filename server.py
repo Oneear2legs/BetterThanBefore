@@ -12,10 +12,15 @@ from urllib.parse import urlparse
 
 PORT = 8000
 
-# Prigogine quotes with gists
+# Prigogine quotes with gists and translations
 QUOTES = [
     {
         "gist": "Time Transforms Life",
+        "gist_ru": "Время преобразует жизнь",
+        "gist_en": "Time Transforms Life",
+        "gist_fr": "Le temps transforme la vie",
+        "gist_de": "Zeit transformiert das Leben",
+        "gist_es": "El tiempo transforma la vida",
         "russian": "Время и опыт - те факторы, которые преобразуют жизнь. Мы не просто наблюдаем течение времени; мы участвуем в нём, и через это участие наша жизнь приобретает новые смыслы и направления.",
         "english": "Time and experience are the factors that transform life. We do not merely observe the passage of time; we participate in it, and through this participation our lives acquire new meanings and directions.",
         "fr": "Le temps et l'expérience sont les facteurs qui transforment la vie. Nous ne faisons pas que observer le passage du temps; nous y participons, et par cette participation nos vies acquièrent de nouveaux sens et directions.",
@@ -24,6 +29,11 @@ QUOTES = [
     },
     {
         "gist": "Vanguard Rooted Past",
+        "gist_ru": "Авангард с корнями в прошлом",
+        "gist_en": "Vanguard Rooted Past",
+        "gist_fr": "L'avant-garde enracinée dans le passé",
+        "gist_de": "Avantgarde in der Vergangenheit verwurzelt",
+        "gist_es": "Vanguardia enraizada en el pasado",
         "russian": "Мы находимся в авангарде времени, но с корнями в прошлом. Это парадокс нашего существования: мы стремимся вперёд, но не можем отрицать того, что нас сформировало. Только понимая историю, мы можем истинно понимать будущее.",
         "english": "We are at the vanguard of time, but rooted in the past. This is the paradox of our existence: we strive forward, yet cannot deny what has shaped us. Only by understanding history can we truly understand the future.",
         "fr": "Nous sommes à l'avant-garde du temps, mais enracinés dans le passé. C'est le paradoxe de notre existence: nous avançons, mais ne pouvons nier ce qui nous a formés. Ce n'est qu'en comprenant l'histoire que nous pouvons vraiment comprendre l'avenir.",
@@ -32,6 +42,11 @@ QUOTES = [
     },
     {
         "gist": "Chaos Creates Order",
+        "gist_ru": "Хаос создаёт порядок",
+        "gist_en": "Chaos Creates Order",
+        "gist_fr": "Le chaos crée l'ordre",
+        "gist_de": "Chaos schafft Ordnung",
+        "gist_es": "El caos crea orden",
         "russian": "Хаос - это не противоположность порядку, а его источник. В самых хаотичных системах рождается новый порядок, новые структуры, новая сложность. И наоборот, идеальный порядок неизбежно порождает расстройство. Это вечный танец творчества во Вселенной.",
         "english": "Chaos is not the opposite of order, but its source. In the most chaotic systems new order is born, new structures, new complexity. Conversely, perfect order inevitably generates disorder. This is the eternal dance of creativity in the Universe.",
         "fr": "Le chaos n'est pas l'opposé de l'ordre, mais sa source. Dans les systèmes les plus chaotiques naît un nouvel ordre, de nouvelles structures, une nouvelle complexité. Inversement, l'ordre parfait génère inévitablement le désordre. C'est la danse éternelle de la créativité dans l'univers.",
@@ -40,6 +55,11 @@ QUOTES = [
     },
     {
         "gist": "Irreversible Time Meaning",
+        "gist_ru": "Необратимое время даёт смысл",
+        "gist_en": "Irreversible Time Meaning",
+        "gist_fr": "Le temps irréversible donne du sens",
+        "gist_de": "Irreversible Zeit gibt Bedeutung",
+        "gist_es": "El tiempo irreversible da significado",
         "russian": "В необратимом времени мы обретаем смысл. Если бы время было обратимым, все события были бы равноправны, и жизнь потеряла бы направление и значение. Именно необратимость времени создаёт историю, создаёт выбор, создаёт ответственность, создаёт смысл нашего существования.",
         "english": "In irreversible time, we find meaning. If time were reversible, all events would be equivalent, and life would lose direction and significance. It is precisely the irreversibility of time that creates history, creates choice, creates responsibility, creates the meaning of our existence.",
         "fr": "Dans le temps irréversible, nous trouvons du sens. Si le temps était réversible, tous les événements seraient équivalents, et la vie perdrait sa direction et son importance. C'est précisément l'irréversibilité du temps qui crée l'histoire, crée le choix, crée la responsabilité, crée le sens de notre existence.",
@@ -48,6 +68,11 @@ QUOTES = [
     },
     {
         "gist": "Nature Dialogue Universe",
+        "gist_ru": "Природа как диалог с универсумом",
+        "gist_en": "Nature Dialogue Universe",
+        "gist_fr": "La nature est un dialogue avec l'univers",
+        "gist_de": "Natur ist ein Dialog mit dem Universum",
+        "gist_es": "La naturaleza es un diálogo con el universo",
         "russian": "Природа - это диалог между человеком и универсумом. Мы не отделены от природы, наблюдая её со стороны. Мы являемся частью природы, и наше участие в её эволюции столь же значимо, как и эволюция самой природы. Человек и космос говорят друг с другом через язык физики.",
         "english": "Nature is a dialogue between man and the universe. We are not separated from nature, observing it from the side. We are part of nature, and our participation in its evolution is as significant as the evolution of nature itself. Human and cosmos communicate with each other through the language of physics.",
         "fr": "La nature est un dialogue entre l'homme et l'univers. Nous ne sommes pas séparés de la nature, l'observant de loin. Nous faisons partie de la nature, et notre participation à son évolution est aussi significative que l'évolution de la nature elle-même. L'humain et le cosmos communiquent l'un avec l'autre par le langage de la physique.",
@@ -56,6 +81,11 @@ QUOTES = [
     },
     {
         "gist": "Entropy Is Creativity",
+        "gist_ru": "Энтропия - это творчество",
+        "gist_en": "Entropy Is Creativity",
+        "gist_fr": "L'entropie est la créativité",
+        "gist_de": "Entropie ist Kreativität",
+        "gist_es": "La entropía es creatividad",
         "russian": "Энтропия - это не просто беспорядок, это творчество. Классическая механика рассматривала энтропию как упадок, как смерть упорядоченных систем. Но современная физика показывает, что энтропия - это движущая сила эволюции, источник разнообразия, источник жизни. Творчество Вселенной скрыто в увеличении энтропии.",
         "english": "Entropy is not merely disorder; it is creativity. Classical mechanics viewed entropy as decline, as the death of ordered systems. But modern physics shows that entropy is the driving force of evolution, the source of diversity, the source of life. The Universe's creativity is hidden in the increase of entropy.",
         "fr": "L'entropie n'est pas seulement le désordre ; c'est la créativité. La mécanique classique considérait l'entropie comme un déclin, comme la mort des systèmes ordonnés. Mais la physique moderne montre que l'entropie est la force motrice de l'évolution, la source de la diversité, la source de la vie. La créativité de l'univers est cachée dans l'augmentation de l'entropie.",
@@ -64,6 +94,11 @@ QUOTES = [
     },
     {
         "gist": "World Grows Complex",
+        "gist_ru": "Мир растёт в сложности",
+        "gist_en": "World Grows Complex",
+        "gist_fr": "Le monde grandit en complexité",
+        "gist_de": "Die Welt wächst in Komplexität",
+        "gist_es": "El mundo crece en complejidad",
         "russian": "Мир усложняется, становится более интересным и более непредсказуемым. Это не деградация, а творческая эволюция. Каждый день Вселенная находит новые способы организовать материю, создать новые формы жизни, новые мысли. Сложность - это не проблема, а кульминация творчества природы.",
         "english": "The world becomes more complex, more interesting, and more unpredictable. This is not degradation, but creative evolution. Every day the Universe finds new ways to organize matter, create new forms of life, new thoughts. Complexity is not a problem, but the culmination of nature's creativity.",
         "fr": "Le monde devient plus complexe, plus intéressant et plus imprévisible. Ce n'est pas une dégradation, mais une évolution créative. Chaque jour, l'univers trouve de nouvelles façons d'organiser la matière, de créer de nouvelles formes de vie, de nouvelles pensées. La complexité n'est pas un problème, mais l'aboutissement de la créativité de la nature.",
@@ -72,6 +107,11 @@ QUOTES = [
     },
     {
         "gist": "Future Through Us",
+        "gist_ru": "Будущее развивается через нас",
+        "gist_en": "Future Through Us",
+        "gist_fr": "L'avenir se développe à travers nous",
+        "gist_de": "Die Zukunft entwickelt sich durch uns",
+        "gist_es": "El futuro se desarrolla a través de nosotros",
         "russian": "Будущее не определено, оно развивается через нас. Это фундаментальный принцип: мы не пассивные свидетели истории, мы её творцы. Каждое наше решение, каждое действие влияет на развитие будущего. Вселенная через нас решает, какой путь ей избрать. Мы несём ответственность за будущее.",
         "english": "The future is not determined; it evolves through us. This is a fundamental principle: we are not passive witnesses to history, we are its creators. Every decision we make, every action we take influences the development of the future. The Universe through us decides which path to take. We bear the responsibility for the future.",
         "fr": "L'avenir n'est pas déterminé ; il évolue à travers nous. C'est un principe fondamental: nous ne sommes pas des observateurs passifs de l'histoire, nous en sommes les créateurs. Chaque décision que nous prenons, chaque action que nous posons influence le développement de l'avenir. L'univers à travers nous décide quel chemin prendre. Nous portons la responsabilité de l'avenir.",
