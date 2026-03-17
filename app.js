@@ -70,25 +70,34 @@ async function displayQuote() {
 
         const quote = await response.json();
         const thirdLang = document.getElementById('thirdLanguage').value;
+        const sourceUrl = quote.source?.url || '#';
+        const sourceName = quote.source?.name || 'Source';
 
         // Russian
-        document.getElementById('quoteRussian').textContent = quote.russian;
+        document.getElementById('quoteRussian').textContent = quote.russian || quote.original_text;
         document.getElementById('attributeRussian').textContent = authorSignatures['ru'] || '— Илья Пригожин';
-        document.getElementById('russianTitle').textContent = quote.gist_ru || quote.gist;
+        document.getElementById('russianTitle').textContent = 'Русский';
+        document.getElementById('sourceRussian').href = sourceUrl;
+        document.getElementById('sourceRussian').textContent = `📖 ${sourceName}`;
 
         // English
-        document.getElementById('quoteEnglish').textContent = quote.english;
+        document.getElementById('quoteEnglish').textContent = quote.english || quote.original_text;
         document.getElementById('attributeEnglish').textContent = authorSignatures['en'] || '— Ilya Prigogine';
-        document.getElementById('englishTitle').textContent = quote.gist_en || quote.gist;
+        document.getElementById('englishTitle').textContent = 'English';
+        document.getElementById('sourceEnglish').href = sourceUrl;
+        document.getElementById('sourceEnglish').textContent = `📖 ${sourceName}`;
 
         // Custom language
-        document.getElementById('quoteCustom').textContent = quote[thirdLang];
+        document.getElementById('quoteCustom').textContent = quote[thirdLang] || quote.original_text;
         document.getElementById('attributeCustom').textContent = authorSignatures[thirdLang] || '— Ilya Prigogine';
-        const gistKey = `gist_${thirdLang}`;
-        document.getElementById('customTitle').textContent = quote[gistKey] || quote.gist;
+        document.getElementById('customTitle').textContent = languageNames[thirdLang]?.native || thirdLang;
+        document.getElementById('sourceCustom').href = sourceUrl;
+        document.getElementById('sourceCustom').textContent = `📖 ${sourceName}`;
     } catch (error) {
         console.error('Error loading quote:', error);
         document.getElementById('quoteRussian').textContent = 'Error loading quote';
+        document.getElementById('quoteEnglish').textContent = 'Error loading quote';
+        document.getElementById('quoteCustom').textContent = 'Error loading quote';
     }
 }
 

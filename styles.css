@@ -160,6 +160,26 @@ header h1 {
     font-weight: 500;
 }
 
+.quote-source {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.source-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.source-link:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
 footer {
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
